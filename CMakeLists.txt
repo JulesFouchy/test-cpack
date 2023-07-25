@@ -30,7 +30,14 @@ endif()
 # Set the folder where the executable is created
 set_target_properties(${PROJECT_NAME} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
+
+include("CMakeUtils/files_and_folders.cmake")
+Cool__target_copy_folder(${PROJECT_NAME} "res")
+
 install(TARGETS ${PROJECT_NAME}
+    DESTINATION bin
+)
+install(DIRECTORY res
     DESTINATION bin
 )
 include(CPack)
