@@ -28,7 +28,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{github.workspace}}/build/INSTALLER.exe
+          files: build/INSTALLER.exe
 
   #-----------------------------------------------------------------------------------------------
   Linux_Clang_Release:
