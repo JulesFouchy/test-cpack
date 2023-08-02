@@ -40,6 +40,7 @@ install(TARGETS ${PROJECT_NAME}
 install(DIRECTORY res
     DESTINATION bin
 )
+set(CPACK_PACKAGE_FILE_NAME "INSTALLER")
 include(CPack)
 
 # Prevents compiler-specific extensions to C++ because they might allow code to compile on your machine but not on other people's machine
