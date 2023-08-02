@@ -16,7 +16,7 @@ jobs:
           submodules: recursive
 
       - name: Configure CMake
-        run: cmake -B ${{github.workspace}}\build -T ClangCL -D CPACK_GENERATOR=WIX
+        run: cmake -B ${{github.workspace}}\build -T ClangCL -D CPACK_GENERATOR=NSIS
       - name: Build
         run: cmake --build ${{github.workspace}}\build --config Release --target ${{env.TARGET}}
 
@@ -28,7 +28,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build/INSTALLER.msi
+          files: build/INSTALLER.exe
 
   #-----------------------------------------------------------------------------------------------
   Linux_Clang_Release:
