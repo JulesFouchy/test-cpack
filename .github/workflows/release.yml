@@ -28,7 +28,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: build/INSTALLER.exe
+          files: build/INSTALLER.msi
 
   #-----------------------------------------------------------------------------------------------
   Linux_Clang_Release:
@@ -57,7 +57,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{github.workspace}}/build/INSTALLER.tar.gz
+          files: ${{github.workspace}}/build/INSTALLER.sh
 
   #-----------------------------------------------------------------------------------------------
   MacOS_Clang_Release:
